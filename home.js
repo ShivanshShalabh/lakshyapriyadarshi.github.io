@@ -9,17 +9,13 @@ margin[0] = '27.9px';
 margin[1] = '41.0px';
 margin[2] = '41.0px';
 
-var num = Math.round(Math.random()*(alignment.length-1));
+var num = Math.round(Math.random() * (alignment.length - 1));
 
 function writePhoto() {
-		var photo = document.getElementById("photo_placeholder");
+	var photo = document.getElementById("photo_placeholder");
 
-		photo.innerHTML = '<div id="photo-'+alignment[num]+'" class="photo">' + 
-			'<img src="photo4.jpg" alt="Andrew Ferguson" /></div>';
+	photo.innerHTML = '<div id="photo-' + alignment[num] + '" class="photo">' +
+		'<img src="photo4.jpg" alt="Andrew Ferguson" /></div>';
 
-		document.getElementById('intro_text').style.marginRight = margin[num];
-		//if (alignment[num] == 'left')
-			//document.getElementById('intro_text').style.marginLeft = margin[num];
-		//else
-			//document.getElementById('intro_text').style.marginRight = margin[num];
+	document.getElementById('intro_text').style.marginRight = margin[num];
 }
