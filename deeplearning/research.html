@@ -7,6 +7,18 @@
           renderMathInElement(document.body, {
           });
       });
+      document.onkeydown = function(e) {
+        if (e.ctrlKey && 
+            (e.keyCode === 67 || 
+             e.keyCode === 86 || 
+             e.keyCode === 85 || 
+             e.keyCode === 117)) {
+            alert('You are not allowed to access source.');
+            return false;
+        } else {
+            return true;
+        }
+};
    </script>
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
