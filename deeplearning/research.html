@@ -19,6 +19,34 @@
             return true;
         }
       };
+               $(document).ready(function() {
+             $("body").on("contextmenu", function(e) {
+                 return false;
+               });
+           });
+var clickedOnScrollbar = function(mouseX)
+{
+   if( $(window).outerWidth() <= mouseX ){
+        return true;   
+    } 
+    }
+
+    $(document).mousedown(function(e){ 
+    var isRightMB;
+        e = e || window.event;
+
+        if ("which" in e)  
+            isRightMB = e.which == 3; 
+        else if ("button" in e)  
+            isRightMB = e.button == 2; 
+
+
+        if(isRightMB){  
+     if( clickedOnScrollbar(e.clientX) ){
+        alert("Right click is not allowed"); 
+      }
+} 
+    });
    </script>
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -132,7 +160,7 @@
          </p>
          <hr>
          <p><b>Exploratory reading:</b>
-            As time <a href="https://arxiv.org/pdf/1702.07800.pdf" target="_blank" rel="noopener noreferrer">evolves</a>, scientists and engineers are <a href="https://www.cs.tau.ac.il/~wolf/deeplearningmeeting/pdfs/lecun-20141105-tau-intel-master-class.pdf" target="_blank" rel="noopener noreferrer">investigating</a> new and interesting ways in which deep learning can be used to approach extremely complex problems. An effective way of <a href="https://deeplearn.org/" target="_blank" rel="noopener noreferrer">discovering</a> such research and understanding its implications in a particular technology domain is by reading research expositions from <a href="https://ai.googleblog.com/" target="_blank" rel="noopener noreferrer">Google AI</a>, <a href="https://deepmind.com/blog" target="_blank" rel="noopener noreferrer">DeepMind</a>, <a href="https://openai.com/blog/" target="_blank" rel="noopener noreferrer">OpenAI</a>, <a href="https://ai.facebook.com/blog/" target="_blank" rel="noopener noreferrer">FAIR</a>, <a href="https://www.nvidia.com/en-us/research/" target="_blank" rel="noopener noreferrer">Nvidia</a>, <a href="https://www.ibm.com/blogs/research/tag/deep-learning/" target="_blank" rel="noopener noreferrer">IBM</a>,  <a href="https://machinelearning.apple.com/" target="_blank" rel="noopener noreferrer">ML@Apple</a>, <a href="https://www.microsoft.com/en-us/research/blog/" target="_blank" rel="noopener noreferrer">Microsoft</a>, <a href="https://www.amazon.science/blog" target="_blank" rel="noopener noreferrer">Amazon Science</a>, <a href="https://phys.org/technology-news/machine-learning-ai/" target="_blank" rel="noopener noreferrer">Phys.org</a>; academic departments such as <a href="https://bair.berkeley.edu/blog/" target="_blank" rel="noopener noreferrer">BAIR</a>, <a href="https://oatml.cs.ox.ac.uk/blog.html" target="_blank" rel="noopener noreferrer">OATML</a>, <a href="https://mila.quebec/en/blog/" target="_blank" rel="noopener noreferrer">MILA</a>, <a href="https://blog.ml.cmu.edu/category/deep-learning/" target="_blank" rel="noopener noreferrer">ML@CMU</a>, <a href="http://ai.stanford.edu/blog/" target="_blank" rel="noopener noreferrer">Stanford AI Lab</a>, <a href="https://www.csail.mit.edu/research/center-brains-minds-and-machines" target="_blank" rel="noopener noreferrer">CSAIL</a>; leaders such as <a href="https://twitter.com/goodfellow_ian" target="_blank" rel="noopener noreferrer">@goodfellow_ian</a>, <a href="https://twitter.com/ylecun" target="_blank" rel="noopener norefrer">@ylecun</a>, <a href="https://twitter.com/karpathy" target="_blank" rel="noopener noreferrer">@karpathy</a>, <a href="https://twitter.com/JeffDean" target="_blank" rel="noopener noreferrer">@jeffdean</a>, <a href="https://twitter.com/fchollet" target="_blank" rel="noopener noreferrer">@fchollet</a>, <a href="https://twitter.com/fidlersanja?lang=en" target="_blank" rel="noopener noreferrer">@fidlersanja</a>, <a href="https://twitter.com/hugo_larochelle" target="_blank" rel="noopener noreferrer">@hugo_larochelle</a>, <a href="https://twitter.com/AnimaAnandkumar" target="_blank" rel="noopener noreferrer">@animaanandkumar</a>, <a href="https://twitter.com/NandoDF" target="_blank" rel="noopener noreferrer">@nandodf</a>, <a href="https://twitter.com/OriolVinyalsML" target="_blank" rel="noopener noreferrer">@oriolvinyalsml</a>, <a href="https://twitter.com/soumithchintala" target="_blank" rel="noopener norefrer">@soumithchintala</a>, <a href="https://twitter.com/drfeifei" target="_blank" rel="noopener noreferrer">@drfeifei</a>, and <a href="https://twitter.com/rsalakhu" target="_blank" rel="noopener noreferrer">@rsalakhu</a>. Connect with the people involved, <i>preferably graduate students</i> from academic departments of your interest, and build a mentor-to-mentee relationship; it is <i>crucial</i>. Your learning experience will be more focused, effective, and meaningful; eventually, you will develop the motivation and dedication to pursue scientific research.
+            As time <a href="https://arxiv.org/pdf/1702.07800.pdf" target="_blank" rel="noopener noreferrer">evolves</a>, scientists and engineers are <a href="https://www.cs.tau.ac.il/~wolf/deeplearningmeeting/pdfs/lecun-20141105-tau-intel-master-class.pdf" target="_blank" rel="noopener noreferrer">investigating</a> new and interesting ways in which deep learning can be used to approach extremely complex problems. An effective way of <a href="https://deeplearn.org/" target="_blank" rel="noopener noreferrer">discovering</a> such research and understanding its implications in a particular technology domain is by reading research expositions from <a href="https://ai.googleblog.com/" target="_blank" rel="noopener noreferrer">Google AI</a>, <a href="https://deepmind.com/blog" target="_blank" rel="noopener noreferrer">DeepMind</a>, <a href="https://openai.com/blog/" target="_blank" rel="noopener noreferrer">OpenAI</a>, <a href="https://ai.facebook.com/blog/" target="_blank" rel="noopener noreferrer">FAIR</a>, <a href="https://www.nvidia.com/en-us/research/" target="_blank" rel="noopener noreferrer">Nvidia</a>, <a href="https://www.ibm.com/blogs/research/tag/deep-learning/" target="_blank" rel="noopener noreferrer">IBM</a>,  <a href="https://machinelearning.apple.com/" target="_blank" rel="noopener noreferrer">ML@Apple</a>, <a href="https://www.microsoft.com/en-us/research/blog/" target="_blank" rel="noopener noreferrer">Microsoft</a>, <a href="https://www.amazon.science/blog" target="_blank" rel="noopener noreferrer">Amazon Science</a>, <a href="https://phys.org/technology-news/machine-learning-ai/" target="_blank" rel="noopener noreferrer">Phys.org</a>; academic departments such as <a href="https://bair.berkeley.edu/blog/" target="_blank" rel="noopener noreferrer">BAIR</a>, <a href="https://oatml.cs.ox.ac.uk/blog.html" target="_blank" rel="noopener noreferrer">OATML</a>, <a href="https://mila.quebec/en/blog/" target="_blank" rel="noopener noreferrer">MILA</a>, <a href="https://blog.ml.cmu.edu/category/deep-learning/" target="_blank" rel="noopener noreferrer">ML@CMU</a>, <a href="http://ai.stanford.edu/blog/" target="_blank" rel="noopener noreferrer">Stanford AI Lab</a>, <a href="https://www.csail.mit.edu/research/center-brains-minds-and-machines" target="_blank" rel="noopener noreferrer">CSAIL</a>; leaders such as <a href="https://twitter.com/goodfellow_ian" target="_blank" rel="noopener noreferrer">@goodfellow_ian</a>, <a href="https://twitter.com/ylecun" target="_blank" rel="noopener norefrer">@ylecun</a>, <a href="https://twitter.com/karpathy" target="_blank" rel="noopener noreferrer">@karpathy</a>, <a href="https://twitter.com/JeffDean" target="_blank" rel="noopener noreferrer">@jeffdean</a>, <a href="https://twitter.com/fchollet" target="_blank" rel="noopener noreferrer">@fchollet</a>, <a href="https://twitter.com/fidlersanja?lang=en" target="_blank" rel="noopener noreferrer">@fidlersanja</a>, <a href="https://twitter.com/hugo_larochelle" target="_blank" rel="noopener noreferrer">@hugo_larochelle</a>, <a href="https://twitter.com/AnimaAnandkumar" target="_blank" rel="noopener noreferrer">@animaanandkumar</a>, <a href="https://twitter.com/NandoDF" target="_blank" rel="noopener noreferrer">@nandodf</a>, <a href="https://twitter.com/OriolVinyalsML" target="_blank" rel="noopener noreferrer">@oriolvinyalsml</a>, <a href="https://twitter.com/soumithchintala" target="_blank" rel="noopener norefrer">@soumithchintala</a>, <a href="https://twitter.com/drfeifei" target="_blank" rel="noopener noreferrer">@drfeifei</a>, and <a href="https://twitter.com/rsalakhu" target="_blank" rel="noopener noreferrer">@rsalakhu</a>. Connect with the people involved, <i>preferably graduate students</i> from academic departments of your interest, and build a mentor-to-mentee relationship; it is <i>crucial</i>. Your learning experience will be more focused, effective, and meaningful; eventually, you will develop the thought process of a deep learning research scientist.
          </p>
          <hr>
          <div class="wrapper">
@@ -199,5 +227,6 @@
          document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
       </script>
       <script async type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script><br>
+
    </body>
 </html>
