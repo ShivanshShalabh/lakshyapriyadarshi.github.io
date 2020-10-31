@@ -96,6 +96,22 @@
          box-shadow: -2px 0 0 #0000FF, -4px 0 0 #ccccff, -7px 0 0 #0000FF;
          color:black;
          }
+          #flex-footer {
+         display: flex;
+         width: 100%;
+         justify-content: center;
+         align-items: center;
+         }
+         #flex-footer-1 {
+         width: auto;
+         margin-left: -8px;
+         margin-right: 2px;
+         }
+         #flex-footer-2 {
+         width: auto;
+         padding: 3px;
+         border-left: .5px solid black;
+         }
       </style>
       <style type="text/css" media="print">
          html {visibility: hidden; display: none;}
@@ -219,13 +235,18 @@
          <p> 
             Please provide your valued feedback, suggestions, comments, or criticism via filling this <a href="https://forms.gle/mDUebncJBm5kZjN58"target="_blank" rel="noopener noreferrer">survey form</a> or write to me at <i><a href="mailto:feedback@abstractions.dev">feedback@abstractions.dev</a></i>. If you are interested in recieving future communications (blogs) from me about computer science, please mark your email <a href="https://forms.gle/29yKWznehxytYHhh9"target="_blank" rel="noopener noreferrer">here</a>. I look forward to connecting with you! 
          <hr>
-         <br>
+         <div id="flex-footer">
+         <div id="flex-footer-1">
          <a href="//www.dmca.com/Protection/Status.aspx?ID=49894968-6317-4e4a-94a6-d9b2da83263c" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca-badge-w100-5x1-07.png?ID=49894968-6317-4e4a-94a6-d9b2da83263c"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script> <a href="https://twitter.com/abstractionsdev?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @abstractionsdev</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+         </div>
+         <div id="flex-footer-2">
          <p class="validation">
             Thank you for your visit. This article is written by <a href="https://in.linkedin.com/in/lakshyapriyadarshi"target="_blank" rel="noopener noreferrer">Lakshya Priyadarshi</a> <script language="Javascript">
                document.write("and was last modified on " + document.lastModified +" IST");
             </script>
          </p>
+      </div>
+      </div>
       </div>
       <script type="text/javascript">
          var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
